@@ -1,2 +1,2 @@
 # foundations
-practice basics
+practice js basics
