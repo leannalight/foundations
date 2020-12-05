@@ -1,4 +1,6 @@
+// 7. Что такое IIFE
 // Immediately Invoked Function Expression
+
 let result = []
 
 /* for (var i = 0; i < 5; i++) {

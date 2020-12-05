@@ -1,4 +1,4 @@
-/* Как работает new */
+/* 9. Как работает new */
 // ключевое слово new
 
 function Cat(color, name) {
@@ -15,7 +15,7 @@ function myNew(constructor, ...args) {
     return constructor.apply(obj, args) || obj;
 }
 
-const cat = myNew(Cat, args: 'black', 'КОТ')
+const cat = myNew(Cat, 'black', 'КОТ')
 console.log(cat)
 
 
