@@ -14,7 +14,7 @@ const john = { surname: 'Сноу'}
 
 person.knows('все', 'Бран')
 person.knows.call(john, 'ничего не', 'Джон')
-person.knows.apply(john, ['ничего не', 'Джон']) // отличие от , что вторым аргументом идёт массив
+person.knows.apply(john, ['ничего не', 'Джон']) // отличие от call тем, что вторым аргументом идёт массив
 person.knows.call(john, ...['ничего не', 'Джон'])
 const bound = person.knows.bind(john, 'ничего не', 'Джон')
 bound();
@@ -49,6 +49,18 @@ const animal = {
 }
 
 animal.logThis(); //  { legs: 4, logThis: [Function: logThis] }
+
+// вызов метода объекта
+const counter = {
+    count: 0,
+    increment() {
+        this.count++;
+        console.log('Count: ' + this.count);
+    }
+};
+
+counter.increment(); // Count: 1; this ссылается на объект counter,
+// потому что функция increment вызвана как метод объекта - через точку
 
 // Как работают стрелочные функции
 

@@ -21,3 +21,19 @@ console.log(cat)
 
  const cat = new Cat();
  console.log(cat);
+
+ /* Вызывая ф-ию с ключевым словом new перед вызовом, движок
+ создает новый пустой объект и записывает его в значение this внутри
+ этой ф-ии, затем исполняет код ф-и и возвращает this */
+
+ function Song(title, artist) {
+     this.title = title;
+     this.artist = artist;
+     this.isLiked = false;
+ }
+
+ const song1 = new Song('Футбольный мяч', 'Антоха МС');
+ console.log(song1);
+
+ // Функции, предназначенные для того, чтобы их вызывали с оператором new, 
+//  называют функциями-конструкторами
